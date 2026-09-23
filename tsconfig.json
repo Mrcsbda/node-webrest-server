@@ -1,0 +1,27 @@
+{
+  // Documentacion: https://aka.ms/tsconfig
+  "compilerOptions": {
+    // Donde esta el codigo fuente y donde se genera el compilado
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // Entorno: Node.js con CommonJS (require por debajo)
+    "module": "nodenext",
+    "target": "es2022",
+    "lib": ["es2023"],
+    "types": ["node"],
+
+    // Permite "import http from 'http'" con modulos CommonJS
+    "esModuleInterop": true,
+
+    // Para depurar: mapea el JS compilado a tu .ts original
+    "sourceMap": true,
+
+    // Chequeo estricto
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
