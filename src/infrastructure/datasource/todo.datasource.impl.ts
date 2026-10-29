@@ -1,0 +1,25 @@
+import { prisma } from "../../data/postgres";
+import { CreateTodoDto, TodoDatasource, TodoEntity, UpdateTodoDto } from "../../domain";
+
+export class TodoDataSourceImpl implements TodoDatasource {
+    async create(createTodoDto: CreateTodoDto): Promise<TodoEntity[]> {
+        throw new Error("Method not implemented");
+    }
+
+    async getAll(): Promise<TodoEntity[]> {
+        const todos = await prisma.todo.findMany();
+        return todos.map(todo => TodoEntity.fromObject(todo));
+    }
+
+    async findById(id: number): Promise<TodoEntity | null> {
+        throw new Error("Method not implemented");
+    }
+
+    async updateById(updateTodoDto: UpdateTodoDto): Promise<TodoEntity> {
+        throw new Error("Method not implemented");
+    }
+
+    async deleteById(id: number): Promise<void> {
+        throw new Error("Method not implemented");
+    }
+}
