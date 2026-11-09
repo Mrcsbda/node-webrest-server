@@ -7,7 +7,7 @@ export abstract class TodoRepository {
 
     //Todo: pagination
     abstract getAll(): Promise<TodoEntity[]>;
-    abstract findById(id: number): Promise<TodoEntity>;
+    abstract findById(id: number): Promise<TodoEntity | null>;
     abstract updateById(updateTodoDto: UpdateTodoDto): Promise<TodoEntity>;
     abstract deleteById(id: number): Promise<TodoEntity>;
 }

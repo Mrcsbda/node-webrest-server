@@ -6,7 +6,7 @@ export interface UpdateTodoUseCase {
     execute(updateTodoDto: UpdateTodoDto): Promise<TodoEntity>;
 }
 
-export class UpdateTodoUseCaseImpl implements UpdateTodoUseCase {
+export class UpdateTodo implements UpdateTodoUseCase {
     constructor(
         private readonly todoRepository: TodoRepository
     ) { }

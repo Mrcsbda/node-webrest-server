@@ -5,7 +5,7 @@ export interface DeleteTodoUseCase {
     execute(id: number): Promise<TodoEntity>;
 }
 
-export class DeleteTodoUseCaseImpl implements DeleteTodoUseCase {
+export class DeleteTodo implements DeleteTodoUseCase {
     constructor(
         private readonly todoRepository: TodoRepository
     ) { }
